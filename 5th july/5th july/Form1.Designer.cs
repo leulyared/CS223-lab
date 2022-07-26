@@ -47,8 +47,19 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.checkbox1 = new System.Windows.Forms.CheckBox();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.rdbtn1 = new System.Windows.Forms.RadioButton();
+            this.rdbtn2 = new System.Windows.Forms.RadioButton();
+            this.label8 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // num
@@ -182,7 +193,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(360, 99);
+            this.dataGridView1.Location = new System.Drawing.Point(369, 129);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(531, 150);
             this.dataGridView1.TabIndex = 19;
@@ -191,11 +202,126 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // checkbox1
+            // 
+            this.checkbox1.AutoSize = true;
+            this.checkbox1.Location = new System.Drawing.Point(381, 104);
+            this.checkbox1.Name = "checkbox1";
+            this.checkbox1.Size = new System.Drawing.Size(107, 17);
+            this.checkbox1.TabIndex = 20;
+            this.checkbox1.Text = "avialabe tonight?";
+            this.checkbox1.UseVisualStyleBackColor = true;
+            this.checkbox1.CheckedChanged += new System.EventHandler(this.avialable_CheckedChanged);
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "original",
+            "used",
+            "high copy"});
+            this.checkedListBox1.Location = new System.Drawing.Point(603, 39);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(120, 49);
+            this.checkedListBox1.TabIndex = 21;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(603, 100);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 23);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "chosed";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // rdbtn1
+            // 
+            this.rdbtn1.AutoSize = true;
+            this.rdbtn1.Location = new System.Drawing.Point(15, 232);
+            this.rdbtn1.Name = "rdbtn1";
+            this.rdbtn1.Size = new System.Drawing.Size(54, 17);
+            this.rdbtn1.TabIndex = 23;
+            this.rdbtn1.TabStop = true;
+            this.rdbtn1.Text = "simple";
+            this.rdbtn1.UseVisualStyleBackColor = true;
+            // 
+            // rdbtn2
+            // 
+            this.rdbtn2.AutoSize = true;
+            this.rdbtn2.Location = new System.Drawing.Point(15, 256);
+            this.rdbtn2.Name = "rdbtn2";
+            this.rdbtn2.Size = new System.Drawing.Size(62, 17);
+            this.rdbtn2.TabIndex = 24;
+            this.rdbtn2.TabStop = true;
+            this.rdbtn2.Text = "variable";
+            this.rdbtn2.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(15, 214);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(66, 13);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "product type";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Location = new System.Drawing.Point(192, 214);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(121, 65);
+            this.groupBox1.TabIndex = 26;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "payment";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(7, 20);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(67, 17);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "delievary";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(7, 42);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(56, 17);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "paypal";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(819, 13);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(70, 25);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "label9";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(912, 280);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.rdbtn2);
+            this.Controls.Add(this.rdbtn1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.checkbox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -220,6 +346,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,6 +372,16 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.CheckBox checkbox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.RadioButton rdbtn2;
+        private System.Windows.Forms.RadioButton rdbtn1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label label9;
     }
 }
 

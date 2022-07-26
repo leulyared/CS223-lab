@@ -20,6 +20,7 @@ namespace _5th_july.NewFolder1
 
         public string price { get; set; }
 
+        public bool isAvailable { get; set; }
         public void save()
         {
             items.Add(this);

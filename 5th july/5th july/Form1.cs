@@ -12,9 +12,10 @@ namespace _5th_july
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public Form1(string user)
         {
             InitializeComponent();
+            label9.Text = user;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -49,6 +50,7 @@ namespace _5th_july
             em.objname = t9.Text;
             em.count = textBox5.Text;
             em.price = textBox7.Text;
+            em.isAvailable= checkbox1.Checked;
             
 
             if (num.Text.Length < 5)
@@ -79,6 +81,27 @@ namespace _5th_july
                 MessageBox.Show(" Items has been Successfully Added!!!");
             }
         }
-       
+
+        private void avialable_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (rdbtn1.Checked)
+                MessageBox.Show("simple");
+            else if (rdbtn2.Checked)
+                MessageBox.Show("variable");
+            else
+                Console.WriteLine("");
+            string message = " ";
+            foreach( var item in checkedListBox1.CheckedItems )
+            {
+                message += item.ToString();
+
+            }
+            MessageBox.Show(message);      
+        }
     }
 }
